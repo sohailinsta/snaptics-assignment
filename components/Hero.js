@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hero() {
   const images = [
@@ -36,9 +37,11 @@ export default function Hero() {
         <p className="text-lg md:text-xl mb-8">
           Crafting Luxurious Living Spaces Since 1995
         </p>
-        <button className="bg-black hover:bg-slate-900 text-white font-bold py-3 px-6 rounded-full transition duration-300">
-          Explore Our Projects
-        </button>
+        <Link href="/projects">
+          <button className="bg-black hover:bg-slate-900 text-white font-bold py-3 px-6 rounded-full transition duration-300">
+            Explore Our Projects
+          </button>
+        </Link>
       </div>
     </div>
   );
