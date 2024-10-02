@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const plans = [
   {
@@ -51,9 +52,11 @@ export default function Testimonials() {
                 <h3 className="text-xl font-semibold mb-2">{plan.name}</h3>
                 <p className="text-gray-600 mb-2">{plan.location}</p>
                 <p className="text-primary font-bold mb-4">{plan.price}</p>
-                <button className="w-full bg-black text-white hover:bg-primary/90 px-4 py-2 rounded-md transition-colors">
-                  View Details
-                </button>
+                <Link href="/projects">
+                  <button className="w-full bg-black text-white hover:bg-primary/90 px-4 py-2 rounded-md transition-colors">
+                    View Details
+                  </button>
+                </Link>
               </div>
             </div>
           ))}

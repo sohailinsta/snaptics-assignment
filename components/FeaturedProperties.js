@@ -5,6 +5,7 @@ import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Link from "next/link";
 
 const FeaturedProperties = ({ properties }) => {
   const settings = {
@@ -42,19 +43,21 @@ const FeaturedProperties = ({ properties }) => {
       <Slider {...settings}>
         {properties.map((property, index) => (
           <div key={index} className="p-4">
-            <div className="bg-gray-800 rounded-lg shadow-lg p-4 text-white">
-              <div className="relative w-full h-48 overflow-hidden">
-                <Image
-                  src={property.imageUrl}
-                  alt={property.title}
-                  layout="fill" // This will fill the parent container
-                  objectFit="cover" // This will cover the area and maintain aspect ratio
-                  className="rounded-t-lg"
-                />
+            <Link href="/projects">
+              <div className="bg-gray-800 rounded-lg shadow-lg p-4 text-white">
+                <div className="relative w-full h-48 overflow-hidden">
+                  <Image
+                    src={property.imageUrl}
+                    alt={property.title}
+                    layout="fill" // This will fill the parent container
+                    objectFit="cover" // This will cover the area and maintain aspect ratio
+                    className="rounded-t-lg"
+                  />
+                </div>
+                <h3 className="text-xl font-bold mt-4">{property.title}</h3>
+                <p className="text-gray-300 mt-2">{property.description}</p>
               </div>
-              <h3 className="text-xl font-bold mt-4">{property.title}</h3>
-              <p className="text-gray-300 mt-2">{property.description}</p>
-            </div>
+            </Link>
           </div>
         ))}
       </Slider>
