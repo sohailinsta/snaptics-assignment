@@ -29,9 +29,11 @@ export default function Hero() {
         objectFit="cover"
         className="brightness-50 transition-opacity duration-1000 ease-in-out"
       />
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
-        <h1 className="text-5xl font-bold mb-4">Welcome to Sai Pragathi</h1>
-        <p className="text-xl mb-8">
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-white px-4 text-center">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          Welcome to Sai Pragathi
+        </h1>
+        <p className="text-lg md:text-xl mb-8">
           Crafting Luxurious Living Spaces Since 1995
         </p>
         <button className="bg-black hover:bg-slate-900 text-white font-bold py-3 px-6 rounded-full transition duration-300">
